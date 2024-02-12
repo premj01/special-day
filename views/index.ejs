@@ -37,6 +37,8 @@
                 radial-gradient(circle at 93.6865234375% 11.42578125%, rgba(144, 94, 255, 0.94) 0%, 60%, rgba(144, 94, 255, 0) 100%),
                 radial-gradient(circle at 48.9013671875% 49.521484375%, #F3A8FF 0%, 100%, rgba(243, 168, 255, 0) 100%);
             --bg-overlay-color: transparent;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .logo {
@@ -63,6 +65,8 @@
             height: 35vw;
             width: 35vw;
             /* margin-left: 100px; */
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
@@ -71,6 +75,7 @@
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
+
         }
 
         .first {
@@ -128,7 +133,7 @@
             <div>Valentine's</div>
             <div>Day</div>
         </div>
-        <div class="second container" id="form-container" style="display: flex;flex-direction: column;">
+        <div class="second container" id="form-container" style="">
             <div class="">
                 <label for="username" class="form-label">Your Name</label>
                 <input type="text" class="form-control" id="username" placeholder="">
@@ -227,5 +232,57 @@
 
     </script>
 </body>
+<style>
+    @media only screen and (max-width: 480px) {
+        body {
+            background-size: 200vw 200vh;
+        }
+
+        .logo {
+            height: 40px;
+            width: 40px;
+        }
+
+        .navbar-css {
+            width: 150vw;
+        }
+
+
+        .second {
+            height: 60vh;
+            margin: 20px;
+        }
+
+        .container {
+            margin-top: 25px;
+            width: 150vw;
+
+        }
+
+        .first {
+            color: white;
+            /* margin-left: 220px; */
+
+        }
+
+        .first>p {
+            font-size: 2rem;
+            margin-top: 30px;
+
+        }
+
+        .first>div {
+            font-size: 6rem;
+            letter-spacing: 2px;
+            line-height: 110px;
+
+        }
+        #username , #name {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(3px);
+            color: black;
+        }
+    }
+</style>
 
 </html>
