@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* cursor: url('public-media/cursor.png'), auto; */
+
+
+        }
+
+        body {
+
+            height: 100vh;
+            width: 100%;
+            background:
+                radial-gradient(circle at 52.384843826293945% 12.503867944081623%, #F3A8FF 0%, 17.5%, rgba(243, 168, 255, 0) 35%),
+                radial-gradient(circle at 28.419739405314125% 59.189230600992836%, #C8AFFF 0%, 17.5%, rgba(200, 175, 255, 0) 35%),
+                radial-gradient(circle at 94.35384114583333% 89.61588541666666%, #AA00C4 0%, 20%, rgba(170, 0, 196, 0) 40%),
+                radial-gradient(circle at 6.503906249999999% 88.037109375%, #905EFF 0%, 25%, rgba(144, 94, 255, 0) 50%),
+                radial-gradient(circle at 16.281474431355793% 29.310630162556965%, #905EFF 0%, 13.632%, rgba(144, 94, 255, 0) 32%),
+                radial-gradient(circle at 93.6865234375% 11.42578125%, rgba(144, 94, 255, 0.94) 0%, 60%, rgba(144, 94, 255, 0) 100%),
+                radial-gradient(circle at 48.9013671875% 49.521484375%, #F3A8FF 0%, 100%, rgba(243, 168, 255, 0) 100%);
+            --bg-overlay-color: transparent;
+        }
+
+        .logo {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        .navbar-css {
+            background-color: #ffffff1c;
+            /* filter: blur(10px); */
+            color: white;
+            font-weight: 500;
+        }
+
+        .first {
+            /* background-color: yellowgreen; */
+        }
+
+        .second {
+            background-color: rgba(255, 255, 255, 0.171);
+            border-radius: 10px;
+            box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+            height: 35vw;
+            width: 35vw;
+            /* margin-left: 100px; */
+        }
+
+        .container {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .first {
+            color: white;
+            margin-left: 10px;
+
+        }
+
+        .first>p {
+            font-size: 2rem;
+            margin-top: 30px;
+
+        }
+
+        .first>div {
+            font-size: 6rem;
+            letter-spacing: 2px;
+            line-height: 110px;
+
+        }
+    </style>
+
+
+    <nav class="navbar navbar-expand-lg navbar-css">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <img class="logo" src="/public/images/logo1.gif" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item">
+                         <a class="nav-link active" aria-current="page" href="#">Home</a> 
+                    </li> -->
+                </ul>
+                <div class="d-flex" role="search">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/" style="color: white;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/" style="color: white;">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="first">
+            <p>Let's surprise your partner</p>
+            <div>Happy</div>
+            <div>Valentine's</div>
+            <div>Day</div>
+        </div>
+        <div class="second container" id="form-container" style="display: flex;flex-direction: column;">
+            <div class="">
+                <label for="username" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="username" placeholder="">
+            </div>
+            <div class="">
+                <label for="exampleFormControlInput1" class="form-label">Name of your partner</label>
+                <input type="text" class="form-control" id="name" placeholder="">
+            </div>
+            <label style="text-align: left;" for="" class="form-label">partner's gender</label>
+
+            <div class="d-flex" style="gap: 10px;">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="gender" value="female">
+                    <label class="form-check-label" for="gender">
+                        Female
+                    </label>
+                </div>
+                <div class="form-check">
+
+                    <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Male
+                    </label>
+                </div>
+            </div>
+            <button class="btn btn-outline-success" id="submit">Generate URL</button>
+
+
+        </div>
+    </div>
+    <!-- <div id="form-container">
+        <input type="text" id="name" placeholder="name">
+        <br>
+        <input type="text" id="username" placeholder="username">
+        <br>
+        <select id="gender">
+            <option value="">Enter partners Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <br>
+        <button type="button" id="submit">Generate Link</button>
+    </div> -->
+    <script>
+        document.getElementById('submit').addEventListener('click', send)
+
+        function send() {
+            let name = document.getElementById("name").value
+            let username = document.getElementById("username").value
+            // let gender = document.getElementById("gender").value
+            let gender;
+            let radios = document.getElementsByName('gender');
+            for (let I = 0; I < radios.length; I++) {
+
+                if (radios[I].checked) {
+                    gender = radios[I].value;
+                    break;
+                }
+            }
+
+            console.log(name + " " + username + " " + gender)
+
+            let formContainer = document.getElementById("form-container")
+
+
+            const url = '/ask-valentine';
+            const data = {
+                "partner": name.replace(/\s/g, ''),
+                "username": username,
+                "gender": gender
+            };
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+                .then(response => response.json())
+                .then(data => {
+
+                    const newEle = document.createElement('div');
+                    newEle.className = 'mb-3';
+                    newEle.innerHTML = `<label class="form-label">URL</label>
+        <input type="text" class="form-control" style="width:100%;" value="${JSON.parse(data).url}">`;
+                    newEle.style.width = '80%'
+                    formContainer.appendChild(newEle)
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+
+
+        }
+
+    </script>
+</body>
+
+</html>

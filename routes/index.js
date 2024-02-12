@@ -4,9 +4,10 @@ const record = require("./users")
 
 
 
+
 /* GET home page. */
 router.get('/', function (req, res) {
-  res.end("Welcome TO INVITE ME ")
+  res.render('index')
 });
 
 router.post('/ask-valentine', async function (req, res) {
@@ -77,18 +78,19 @@ router.get('/ask/:urlcode', async (req, res) => {
 
   //check record exist or not
   let urlVarification = await record.findOne({ urlCode: arr[1], name: arr[0] })
-  let headerToSend
-  if(urlVarification)
-  {
-      headerToSend = JSON.stringify({name : urlVarification.name ,gender:urlVarification.gender , user : urlVarification.username  })
-    }else{
-      headerToSend = JSON.stringify({name : false ,gender:undefined , user : undefined  })
-      
+  // let headerToSend
+  if (urlVarification) {
+
+    res.render("showBoys", { name: urlVarification.name, gender: urlVarification.gender, user: urlVarification.username, req :req})
+
+
+    // headerToSend = JSON.stringify({ name: urlVarification.name, gender: urlVarification.gender, user: urlVarification.username })
+  } else {
+    // headerToSend = JSON.stringify({ name: false, gender: undefined, user: undefined })
+    console.log(urlEncoding + ": not found")
   }
-  res.json(headerToSend)
+  // res.json(headerToSend)
 
 
 })
-
-
 module.exports = router;
