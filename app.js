@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var session = require('express-session')
 var cors = require('cors')
+let ejs = require('ejs');
 
 
 app.use(session({
@@ -16,6 +17,8 @@ app.use(session({
   saveUninitialized:false,
   secret:"hey buddy how are you"
 }))
+app.use('/public' ,express.static(path.join(__dirname, 'public')))
+app.set('view engine', 'ejs');
 app.use(cors())
 app.use(logger('dev'));
 app.use(express.json());
