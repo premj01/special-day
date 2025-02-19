@@ -10,13 +10,14 @@ var usersRouter = require('./routes/users');
 var session = require('express-session')
 var cors = require('cors')
 let ejs = require('ejs');
-
+const keepAlive = require('./keep-alive');
 
 app.use(session({
   resave:false,
   saveUninitialized:false,
   secret:"hey buddy how are you"
 }))
+keepAlive();
 app.use('/public' ,express.static(path.join(__dirname, 'public')))
 app.set('view engine', 'ejs');
 app.use(cors())
@@ -47,7 +48,7 @@ app.use('/users', usersRouter);
 
 // for universal paths
 app.use(function(req, res, next) {
-  res.status(404).send('<h1>Sorry, we cannot find that!<h1>');
+  res.status(404).send('<h1>404<br>Sorry, we cannot find that!<h1>');
 });
 
 
